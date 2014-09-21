@@ -1,0 +1,48 @@
+\documentclass{beamer}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+%\usepackage{multimedia}
+%\usepackage{movie15}
+\usepackage{beamerthemesplit} 
+\usepackage{beamerthemeshadow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xeCJK}
+%\usepackage{fontspec}
+\setCJKmainfont[BoldFont=simhei.ttf]{simsun.ttf}
+\setCJKsansfont{simhei.ttf}
+\setCJKmonofont{simfang.ttf}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{figures/}}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\raggedright
+
+\begin{document}
+\input{./sections/makeatletter}
+
+\title{超声速流场显示实验答辩}
+\subtitle{力学实验与技术原理}
+\author[第一组]{指导教师:顾洪斌\\第一组:周吕文{~}娄开元{~}王祺{~~}姜智捷}
+\institute[中国科学院研究生院]{中国科学院研究生院}
+\date{2012年7月3日}
+\frame[plain]{\titlepage} % 产生主题页，plain选项表示不显示页眉页脚等内容
+
+\subject{Computer Tools, TeX, Slide}
+\titlegraphic{\pgfuseimage{title}}
+\AtBeginSection[]{ % 在每个Section前都会加入的Frame
+  \frame<handout:0>{
+    \frametitle{Outline}
+    \tableofcontents[current,currentsubsection]
+  }
+}
+
+
+\input{./sections/Introduction}
+\input{./sections/Theory}
+\input{./sections/Scheme}
+\input{./sections/Results}
+
+\input{./sections/thebibliography}
+\input{./sections/ThankYou}
+\end{document}
